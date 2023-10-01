@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,14 +24,16 @@ function App() {
 
   const guess = (higherOrLower) => {
     
-    let successful = false;
-  
+    let successful;
+    const nextNum = drawnNumbers[arrIndex + 1] 
+    const currentNum = drawnNumbers[arrIndex]
+
     if (higherOrLower === 'lower') {
   
-      successful = drawnNumbers[arrIndex + 1] <=  drawnNumbers[arrIndex];
+      successful = nextNum <=  currentNum;
     } else {
   
-    successful = drawnNumbers[arrIndex + 1] >=  drawnNumbers[arrIndex];
+      successful = nextNum >=  currentNum;
     }
   
     console.log(drawnNumbers)
@@ -46,6 +46,7 @@ function App() {
     } else {
       alert(` alas - number was ${drawnNumbers[arrIndex +1]}`)
       setDrawnNumbers(getRandomArray())
+      setArrIndex(0) 
     }
   }
   
@@ -74,7 +75,7 @@ function App() {
 
   return (
     <>
-     
+     {arrIndex}
       <div style = {{marginBottom: '20px'}}>
           {Array.from({ length: 10 }, (_, index) => (
             <Button key={index} variant={index+1 === drawnNumbers[arrIndex] ? 'info'  :  'primary' } style={buttonStyle}>{index+1}</Button>
