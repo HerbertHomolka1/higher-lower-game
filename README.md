@@ -1,6 +1,6 @@
-![image](https://github.com/HerbertHomolka1/higher-lower-game/assets/110294810/301ce6d8-1e3e-481d-8bf9-2a3eef73ec18)
-
 # Higher-Lower React App
+
+![image](https://github.com/HerbertHomolka1/higher-lower-game/assets/110294810/301ce6d8-1e3e-481d-8bf9-2a3eef73ec18)
 
 ## Overview
 
