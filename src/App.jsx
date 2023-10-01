@@ -76,10 +76,14 @@ function App() {
   return (
     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 =======
      {arrIndex}
 >>>>>>> 48b9ff5 (fixed-readability)
+=======
+ 
+>>>>>>> main
       <div style = {{marginBottom: '20px'}}>
           {Array.from({ length: 10 }, (_, index) => (
             <Button key={index} variant={index+1 === drawnNumbers[arrIndex] ? 'info'  :  'primary' } style={buttonStyle}>{index+1}</Button>
